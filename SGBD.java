@@ -4,11 +4,15 @@ public class SGBD {
     String dbType;
     Date startDate;
     Date lastExporDate;
+    Port connExterne1;
+    Port connExterne2;
     
-    public SGBD(String dbType, Date startDate, Date lastExporDate) {
+    public SGBD(String dbType, Date startDate, Date lastExporDate, Port connExterne1, Port connExterne2) {
         this.dbType = dbType;
         this.startDate = startDate;
         this.lastExporDate = lastExporDate;
+        this.connExterne1 = connExterne1;
+        this.connExterne2 = connExterne2;
     }
 
     public String getDbType() {
