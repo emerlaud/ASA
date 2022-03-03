@@ -1,3 +1,9 @@
 public class Client {
-    Port connExterne1;
+    Port port;
+
+    public Client(Port port) {
+        this.port = port;
+    }
+
+    
 }
