@@ -21,13 +21,16 @@ public class Main {
 
         attachements.add(new Attachement(gestionnaireSecurite.inputIdentifiants, requeteSecurite.appelant));
         attachements.add(new Attachement(sgbd.requeteAutorisation, requeteSecurite.appele));
+        System.out.println("All attachements created");
 
         Serveur serveur1 = new Serveur(new Port(), gestionnaireConnexion, gestionnaireSecurite, sgbd, requeteSecurite, requeteSecurite, requeteSecurite, attachements);
+        System.out.println("Serveur created");
         Client client1 = new Client(new Port());
+        System.out.println("Client created");
 
         Systeme system = new Systeme(client1, serveur1);
-
-        
+        System.out.println("System created");
+               
     }
        
 }
