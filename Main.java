@@ -3,7 +3,7 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args){
-        GestionnaireConnexion gestionnaireConnexion = new GestionnaireConnexion(new Port(), new Port(), new Port());  
+        GestionnaireConnexion gestionnaireConnexion = new GestionnaireConnexion(new Port(), new Port(), new Port());
         GestionnaireSecurite gestionnaireSecurite = new GestionnaireSecurite("dbType", new Port(), new Port());
         SGBD sgbd = new SGBD("dbType", new Date(), new Date());
 
@@ -12,7 +12,7 @@ public class Main {
         Lien requeteSecurite = new Lien(true, new Role(), new Role());
 
         ArrayList<Attachement> attachements = new ArrayList<Attachement>();
-        
+
         attachements.add(new Attachement(gestionnaireConnexion.inputSecu, requeteAutorisation.appelant));
         attachements.add(new Attachement(gestionnaireSecurite.inputSecu, requeteAutorisation.appele));
 
@@ -30,7 +30,7 @@ public class Main {
 
         Systeme system = new Systeme(client1, serveur1);
         System.out.println("System created");
-               
+
     }
-       
+
 }

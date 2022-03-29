@@ -5,7 +5,7 @@ Java project for Master Second Degree
 
 
 ## Start the project
-In a terminal launch the command lines following : 
+In a terminal launch the command lines following :
 
 `javac Main.java` *Compile the program*
 

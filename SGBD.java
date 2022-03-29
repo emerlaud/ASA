@@ -5,12 +5,12 @@ public class SGBD {
     Date startDate;
     Date lastExporDate;
     Port requeteAutorisation;
-    Port requeteSql; 
-    
+    Port requeteSql;
+
     public SGBD(String dbType, Date startDate, Date lastExporDate) {
         this.dbType = dbType;
         this.startDate = startDate;
         this.lastExporDate = lastExporDate;
     }
-    
+
 }

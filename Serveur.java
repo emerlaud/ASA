@@ -23,10 +23,10 @@ public class Serveur {
         this.requeteAutorisation = requeteAutorisation;
         this.requeteSecurite = requeteSecurite;
         this.attachements = attachements;
-        
-        
+
+
     }
 
-    
+
 
 }
