@@ -22,6 +22,6 @@ public class Systeme {
     }
 
     public String toString() {
-        return "Systeme en ligne compose de '" + client.toString() + "' et de '" + serveur.toString() + "'";
+        return "Systeme en ligne compose de '" + client.toString() + "' et de '" + serveur.toString() + "'\n";
     }
 }

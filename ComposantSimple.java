@@ -1,2 +1,2 @@
-public class ComposantSimple extends Composant{
+public abstract class ComposantSimple extends Composant {
 }

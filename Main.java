@@ -4,7 +4,8 @@ public class Main {
         Client client1 = new Client("Cient 1");
         Systeme systeme = new Systeme(client1, serveur1);
 
-        client1.sendRequest("select * from db");
+        client1.sendRequest("SGBD: select * from db");
+        client1.sendRequest("requete invalide");
         System.out.println("Tout fonctionne !");
     }
 }

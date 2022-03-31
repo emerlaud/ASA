@@ -42,6 +42,17 @@ public class Serveur extends Composite {
         System.out.println("Serveur cree");
     }
 
+    @Override
+    public String handleMessage(String message) {
+        if (message.startsWith("SGBD: ")) {
+            String dbResponse = sgbd.handleMessage(message);
+            this.reception.send(dbResponse);
+        } else {
+            System.err.println("Le message '" + message + "' n'a pas pu etre gere par le serveur\n");
+        }
+        return "";
+    }
+
     public String toString() {
         return this.name;
     }

@@ -8,14 +8,26 @@ public class Port {
     }
 
     public void send(String message) {
-        System.out.println("Sending message: " + message);
         if (this.attachement != null) {
-            this.attachement.role.lien.appele.attachement.port.receive(message);
+            Port targetPort;
+            String role;
+            Role inputRole = this.attachement.role;
+            Lien upLink = inputRole.lien;
+            if (inputRole.equals(upLink.appelant)) {
+                targetPort = upLink.appele.attachement.port;
+                role = "Envoi";
+            } else {
+                targetPort = upLink.appelant.attachement.port;
+                role = "Reponse";
+            }
+            System.out.println(role + " du message: '" + message + "' de " + composant);
+
+            targetPort.receive(message);
         }
     }
 
-    public void receive(String message){
-        System.out.println("Message recu: " + message);
+    public void receive(String message) {
+        System.out.println("Message recu: '" + message + "' pour " + composant);
+        this.composant.handleMessage(message);
     }
-
 }

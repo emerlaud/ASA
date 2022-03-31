@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Composite extends Composant {
+public abstract class Composite extends Composant {
     List<Composant> composants;
 
     public List<Composant> getComposants() {

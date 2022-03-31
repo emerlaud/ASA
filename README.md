@@ -10,3 +10,5 @@ In a terminal launch the command lines following :
 `javac Main.java` *Compile the program*
 
 `java Main` *Start the program*
+
+del *.class
