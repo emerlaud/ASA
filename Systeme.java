@@ -1,11 +1,27 @@
-public class Systeme {
-    Client client1;
-    Serveur serveur1;
-    Lien[] liens;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Systeme(Client client1, Serveur serveur1) {
-        this.client1 = client1;
-        this.serveur1 = serveur1;
+public class Systeme {
+    Client client;
+    Serveur serveur;
+    Lien lien1;
+    List<Attachement> attachements;
+
+    public Systeme(Client client, Serveur serveur) {
+        this.client = client;
+        this.serveur = serveur;
+        this.lien1 = new Lien(true);
+
+        this.attachements = new ArrayList<Attachement>() {
+            {
+                add(new Attachement(client.port, lien1.appelant));
+                add(new Attachement(serveur.reception, lien1.appele));
+            }
+        };
+        System.out.println(this);
     }
 
+    public String toString() {
+        return "Systeme en ligne compose de '" + client.toString() + "' et de '" + serveur.toString() + "'";
+    }
 }

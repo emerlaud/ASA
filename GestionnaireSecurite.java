@@ -1,11 +1,11 @@
-public class GestionnaireSecurite {
+public class GestionnaireSecurite extends ComposantSimple{
     String dbType;
     Port inputSecu;
     Port inputIdentifiants;
 
-    public GestionnaireSecurite(String dbType, Port inputSecu, Port inputIdentifiants) {
-        this.dbType = dbType;
-        this.inputSecu = inputSecu;
-        this.inputIdentifiants = inputIdentifiants;
+    public GestionnaireSecurite() {
+        this.dbType = "dbType";
+        this.inputSecu = new Port(this);
+        this.inputIdentifiants = new Port(this);
     }
 }

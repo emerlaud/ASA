@@ -1,10 +1,13 @@
 public class Attachement {
-    Port appelant;
-    Role appele;
+    Port port;
+    Role role;
 
-    public Attachement(Port appelant, Role appele) {
-        this.appelant = appelant;
-        this.appele = appele;
+    public Attachement(Port port, Role role) {
+        System.err.println(port + " " + role);
+        this.port = port;
+        this.role = role;
+        // port.attachement is defined
+        this.port.attachement = this;
+        this.role.attachement = this;
     }
-
 }
